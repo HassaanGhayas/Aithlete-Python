@@ -230,8 +230,6 @@ if submit:
             equipment,
         )
         if workout_plan:
-            st.subheader("📋 Your AI-Generated Workout Plan:")
-            st.json(workout_plan)
             pdf_buffer = generate_workout_pdf(workout_plan)
             st.download_button(
                 "📥 Download Workout Plan as PDF",
